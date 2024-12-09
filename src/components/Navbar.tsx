@@ -63,7 +63,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a
             href="#about"
-            className="text-xl font-bold text-gray-900"
+            className="text-xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
             onClick={handleNavClick}
           >
             ZH
