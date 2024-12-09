@@ -1,34 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Linkedin, Clock } from 'lucide-react';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { useForm as useFormspree } from '@formspree/react';
 
-type FormInputs = {
+interface FormData {
   name: string;
   email: string;
   message: string;
-};
+}
+
+interface FormErrors {
+  [key: string]: string;
+}
 
 export function Contact() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors }
-  } = useForm<FormInputs>();
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const [formspreeState, sendToFormspree] = useFormspree(import.meta.env.VITE_FORMSPREE_ID);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
     try {
-      await sendToFormspree(data);
-      if (formspreeState.succeeded) {
-        reset();
-        alert('Thank you for your message! I will get back to you soon.');
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
       }
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('There was an error sending your message. Please try again later.');
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -67,103 +102,106 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-indigo-600" />
-                <div>
-                  <p className="font-medium">Response Time</p>
-                  <p className="text-gray-600">Within 24 hours</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-              <p className="text-sm text-gray-600">
-                Prefer email? Feel free to reach out directly at{' '}
-                <a
-                  href="mailto:zhiwen555@gmail.com"
-                  className="text-indigo-600 hover:text-indigo-700 font-medium"
-                >
-                  zhiwen555@gmail.com
-                </a>
-              </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" action="https://formspree.io/f/manyzeag">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  {...register('name', { required: 'Name is required' })}
-                  type="text"
-                  id="name"
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
-                    errors.name ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Your name"
-                  name="name"
-                />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                )}
-              </div>
+          <div className="space-y-6">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Your name"
+                  />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  )}
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  {...register('email', {
-                    required: 'Email is required',
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'Invalid email address'
-                    }
-                  })}
-                  type="email"
-                  id="email"
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="your@email.com"
-                  name="email"
-                />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                )}
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.email ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="your@email.com"
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  )}
+                </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  {...register('message', { required: 'Message is required' })}
-                  id="message"
-                  rows={4}
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
-                    errors.message ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Your message"
-                  name="message"
-                />
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
-                )}
-              </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    rows={4}
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.message ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Your message"
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                  )}
+                </div>
 
-              <button
-                type="submit"
-                disabled={formspreeState.submitting}
-                className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {formspreeState.submitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
+                {submitStatus === 'success' && (
+                  <div className="p-3 bg-green-100 text-green-700 rounded-md">
+                    Message sent successfully!
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-3 bg-red-100 text-red-700 rounded-md">
+                    Failed to send message. Please try again.
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
+
+            <div className="p-4 bg-blue-50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                All fields marked with <span className="text-red-500">*</span> are required
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -171,6 +209,21 @@ export function Contact() {
   );
 }
 
+// <div className="flex items-center gap-3">
+//   <Clock className="w-5 h-5 text-indigo-600" />
+//   <div>
+//     <p className="font-medium">Response Time</p>
+//     <p className="text-gray-600">Within 24 hours</p>
+//   </div>
+// </div>
+
+// <div className="flex items-center gap-3">
+//   <Clock className="w-5 h-5 text-indigo-600" />
+//   <div>
+//     <p className="font-medium">Response Time</p>
+//     <p className="text-gray-600">Within 24 hours</p>
+//   </div>
+// </div>
 
 // <div className="flex items-center gap-3">
 //   <Clock className="w-5 h-5 text-indigo-600" />
