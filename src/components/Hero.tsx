@@ -24,11 +24,12 @@ export function Hero() {
         </p>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-left">
-        Hi, I’m Zhiwen, a full-stack software engineer with a passion for blockchain technology and decentralized applications. With experience across Ethereum and Solana, I’ve developed innovative solutions in DeFi, NFTs, and token ecosystems. My work combines technical precision with creative problem-solving, from building smart contracts and DEXs to designing scalable backends and user-friendly frontends.
-        </p>
-
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-left">
-        Beyond blockchain, I’m skilled in crafting dynamic web and mobile applications using modern frameworks like React, Angular, and Next.js. I take pride in delivering complete, high-quality software solutions that make a meaningful impact.
+          Hi, I’m Zhiwen, a full-stack software engineer passionate about blockchain technology
+          and decentralized applications. I’ve built innovative solutions in DeFi, NFTs, and
+          token ecosystems, including smart contracts, decentralized exchanges, and scalable
+          backends. Beyond blockchain, I excel in creating dynamic web and mobile applications
+          using modern frameworks like React, Angular, and Next.js, delivering high-quality
+          software that combines technical precision with user-friendly design.
         </p>
 
         <div className="flex justify-center gap-6 mb-12">
