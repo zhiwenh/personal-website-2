@@ -6,6 +6,7 @@ const navItems = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education"},
   { href: "#contact", label: "Contact" }
 ];
 
@@ -33,7 +34,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold text-gray-900">ZH</a>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a

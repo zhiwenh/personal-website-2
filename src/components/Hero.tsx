@@ -43,13 +43,22 @@ export function Hero() {
           </a>
         </div>
 
-        <a
-          href="#projects"
-          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
-        >
-          View My Work
-          <ArrowDown className="w-4 h-4" />
-        </a>
+        <div className="flex justify-center gap-4">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
+          >
+            Contact Me
+            <Mail className="w-4 h-4" />
+          </a>
+          <a
+            href="#experience"
+            className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-50 transition-colors border border-gray-200"
+          >
+            View My Work
+            <ArrowDown className="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
