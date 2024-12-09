@@ -5,9 +5,9 @@ import personalImage from './../personal-image.png';
 
 export function Hero() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 pt-16">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 pt-16 py-3">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <div className="mb-8">
+        <div className="mt-2 mb-8">
           <img
             src={personalImage}
             alt="Zhiwen Huang"

@@ -4,7 +4,7 @@ import { education } from '../data/education';
 
 export function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-10 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
         <div className="space-y-8">
@@ -20,7 +20,7 @@ export function Education() {
                 {edu.description && (
                   <p className="mt-2 text-gray-600">{edu.description}</p>
                 )}
-                <a 
+                <a
                   href={edu.link}
                   className="mt-2 text-indigo-600 hover:text-indigo-700 inline-block"
                   target="_blank"
