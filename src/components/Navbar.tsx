@@ -62,11 +62,11 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a
-            href="#"
+            href="#about"
             className="text-xl font-bold text-gray-900"
             onClick={handleNavClick}
           >
-            ZH
+            Zhiwen Huang
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
