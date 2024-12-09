@@ -52,7 +52,7 @@ export function Hero() {
             <Mail className="w-4 h-4" />
           </a>
           <a
-            href="#experience"
+            href="#projects"
             className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-50 transition-colors border border-gray-200"
           >
             View My Work
