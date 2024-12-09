@@ -66,7 +66,7 @@ export function Navbar() {
             className="text-xl font-bold text-gray-900"
             onClick={handleNavClick}
           >
-            Zhiwen Huang
+            ZH
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
