@@ -28,14 +28,6 @@ export function Footer() {
             <p className="text-gray-400 text-sm">
               © {currentYear} Zhiwen Huang. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-indigo-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors">
-                Terms of Service
-              </a>
-            </div>
           </div>
         </div>
       </div>
