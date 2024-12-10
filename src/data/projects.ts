@@ -4,8 +4,16 @@ import devchainImage from './../devchain.png';
 import dexImage from './../dex2.png';
 import googleMusicVisualizerImage from './../google-music-visualizer.png';
 import leagueOfLegendsCooldownTrackerImage from './../league-of-legends-cooldown-tracker2.png';
+import personalWebsiteImage from './../personal-website-image.png';
 
 export const projects = [
+  {
+    title: "Personal Website",
+    description: "A personal website built using React and with the styling done with TailwindCSS.",
+    github: "https://github.com/zhiwenh/personal-website-2",
+    image: personalWebsiteImage,
+    date: "2024"
+  },
   {
     title: "Dex",
     description: "A decentralized exchange for Ethereum ERC-20 tokens. Works off a single smart contract that sits on the Ethereum blockchain. Users can add tokens to trade and trade for other tokens.",
