@@ -15,7 +15,7 @@ export function Skills() {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">Skills & Expertise</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Skills</h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and areas of expertise,
             spanning multiple domains and technologies.
