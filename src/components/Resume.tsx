@@ -12,7 +12,7 @@ export function Resume() {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <FileText className="w-8 h-8 text-indigo-600" />
-                <h3 className="text-xl font-semibold mr-1">Zhiwen Huang - Resume</h3>
+                <h3 className="text-xl font-semibold mr-2">Zhiwen Huang - Resume</h3>
               </div>
               <a
                 href={zhiwenHuangResume}
