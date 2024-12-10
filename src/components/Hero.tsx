@@ -24,12 +24,10 @@ export function Hero() {
         </p>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-left">
-          Hi, I’m Zhiwen, a full-stack software engineer passionate about blockchain technology
-          and decentralized applications. I’ve built innovative solutions in DeFi, NFTs, and
-          token ecosystems, including smart contracts, decentralized exchanges, and scalable
-          backends. Beyond blockchain, I excel in creating dynamic web and mobile applications
-          using modern frameworks like React, Angular, and Next.js, delivering high-quality
-          software that combines technical precision with user-friendly design.
+          Hi, I’m Zhiwen, a full-stack software engineer specializing in blockchain and
+          decentralized applications. I’ve worked on DeFi, NFTs, tokens, smart contracts,
+          DEXs, and scalable backends. I also develop dynamic web and mobile apps using
+          React, Angular, and Next.js, focusing on high-quality, user-friendly design.
         </p>
 
         <div className="flex justify-center gap-6 mb-12">
