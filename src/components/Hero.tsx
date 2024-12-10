@@ -26,7 +26,7 @@ export function Hero() {
           Hi, I’m Zhiwen, a full-stack software engineer specializing in blockchain and
           decentralized applications. I’ve worked on DeFi, NFTs, tokens, smart contracts,
           DEXs, and scalable backends. I also develop dynamic web and mobile apps using
-          React, Angular, and Next.js, focusing on high-quality, user-friendly design.
+          React and Angular, focusing on high-quality, user-friendly design.
         </p>
 
         <div className="flex justify-center gap-6 mb-12">
