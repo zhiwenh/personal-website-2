@@ -3,11 +3,11 @@ import { Menu } from 'lucide-react';
 
 const navItems = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
+  { href: "#resume", label: "Resume" },
   { href: "#education", label: "Education" },
-  { href: "#resume", label: "Resume"},
   { href: "#contact", label: "Contact" }
 ];
 
@@ -42,7 +42,7 @@ export function Navbar() {
 
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      const navbarHeight = 64; // Height of the navbar
+      const navbarHeight = 64;
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
       window.scrollTo({
@@ -50,7 +50,6 @@ export function Navbar() {
         behavior: 'smooth'
       });
 
-      // Reset scrolling state after animation
       setTimeout(() => {
         setIsScrolling(false);
       }, 1000);
@@ -58,12 +57,12 @@ export function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full bg-white/80 backdrop-blur-sm z-50 transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed w-full bg-slate-900/90 backdrop-blur-sm z-50 transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a
-            href="#about"
-            className="text-xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+            href="#"
+            className="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors"
             onClick={handleNavClick}
           >
             ZH
@@ -74,7 +73,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-slate-300 hover:text-indigo-400 transition-colors"
                 onClick={handleNavClick}
               >
                 {item.label}
@@ -84,7 +83,7 @@ export function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900"
+            className="md:hidden p-2 rounded-md text-slate-300 hover:text-indigo-400"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -96,7 +95,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-2 text-gray-600 hover:text-gray-900"
+                className="block py-2 text-slate-300 hover:text-indigo-400"
                 onClick={handleNavClick}
               >
                 {item.label}

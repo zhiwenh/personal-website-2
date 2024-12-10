@@ -1,29 +1,38 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { SocialLinks } from './Footer/SocialLinks';
+import { FooterLinks } from './Footer/FooterLinks';
+import { ContactInfo } from './Footer/ContactInfo';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h3 className="text-xl font-bold">Zhiwen Huang</h3>
-            <p className="text-gray-400">Software Engineer | Blockchain Engineer</p>
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="space-y-6">
+            <ContactInfo />
+            <SocialLinks />
           </div>
-          <div className="flex gap-6">
-            <a href="https://github.com/zhiwenh" className="hover:text-indigo-400">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://linkedin.com/in/zhiwenhuang0" className="hover:text-indigo-400">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="mailto:zhiwen555@gmail.com" className="hover:text-indigo-400">
-              <Mail className="w-6 h-6" />
-            </a>
+          <div className="col-span-2">
+            <FooterLinks />
           </div>
         </div>
-        <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Zhiwen Huang. All rights reserved.</p>
+
+        <div className="mt-12 pt-8 border-t border-slate-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-400 text-sm">
+              © {currentYear} Zhiwen Huang. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm text-slate-400">
+              <a href="#" className="hover:text-indigo-400 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-indigo-400 transition-colors">
+                Terms of Service
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
