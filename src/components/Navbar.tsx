@@ -3,8 +3,8 @@ import { Menu } from 'lucide-react';
 
 const navItems = [
   { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
   { href: "#resume", label: "Resume"},
