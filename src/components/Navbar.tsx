@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, Code2 } from 'lucide-react';
 
 const navItems = [
   { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#resume", label: "Resume" },
   { href: "#education", label: "Education" },
@@ -62,10 +62,15 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a
             href="#"
-            className="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors"
+            className="flex items-center gap-2 group"
             onClick={handleNavClick}
           >
-            ZH
+            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 group-hover:bg-indigo-500 transition-colors">
+              <Code2 className="w-5 h-5 text-white transform group-hover:rotate-12 transition-transform" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
+              ZH
+            </span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
