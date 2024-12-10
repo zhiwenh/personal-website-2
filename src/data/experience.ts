@@ -10,7 +10,7 @@ export const workExperience = [
     position: "Software Engineer III",
     period: "Mar 2022 - Jun 2022",
     logo: synapseLogo,
-    description: "Streamlined financial applications by deploying Ethereum nodes on AWS and developed a multi-chain custodial wallet supporting Ethereum, Solana, and Polygon to enhance trading. Using Terraform, automated Polygon node deployment, improving scalability. Alsocreated detailed diagrams of Ethereum-based trade functionality for better clarity and decision-making."
+    description: "Streamlined financial applications by deploying Ethereum nodes on AWS and developed a multi-chain custodial wallet supporting Ethereum, Solana, and Polygon to enhance trading. Using Terraform, automated Polygon node deployment, improving scalability. Also created detailed diagrams of Ethereum-based trade functionality for better clarity and decision-making."
   },
   {
     company: "Icered",
