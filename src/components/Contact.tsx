@@ -1,22 +1,57 @@
-import React from 'react';
-import { Mail, Linkedin, Clock, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Linkedin, Clock } from 'lucide-react';
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface FormErrors {
+  [key: string]: string;
+}
 
 export function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
   return (
     <section id="contact" className="py-10 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">Get in Touch</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold mb-4 text-slate-900">Contact Information</h3>
+            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-indigo-600" />
                 <div>
-                  <p className="font-medium text-slate-700">Email</p>
+                  <p className="font-medium">Email</p>
                   <a href="mailto:zhiwen555@gmail.com" className="text-indigo-600 hover:text-indigo-700">
                     zhiwen555@gmail.com
                   </a>
@@ -26,7 +61,7 @@ export function Contact() {
               <div className="flex items-center gap-3">
                 <Linkedin className="w-5 h-5 text-indigo-600" />
                 <div>
-                  <p className="font-medium text-slate-700">LinkedIn</p>
+                  <p className="font-medium">LinkedIn</p>
                   <a
                     href="https://linkedin.com/in/zhiwenhuang0"
                     target="_blank"
@@ -41,54 +76,102 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
-            <form method="POST" className="space-y-4" action="https://formspree.io/f/manyzeag">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-2 bg-white border border-slate-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-slate-900"
-                  placeholder="Your name"
-                />
-              </div>
+          <div className="space-y-6">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <form method="POST" className="space-y-4" action="https://formspree.io/f/manyzeag">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Your name"
+                  />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  )}
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-2 bg-white border border-slate-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-slate-900"
-                  placeholder="your@email.com"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.email ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="your@email.com"
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  )}
+                </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-white border border-slate-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-slate-900"
-                  placeholder="Your message"
-                />
-              </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    rows={4}
+                    className={`w-full px-4 py-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 ${
+                      errors.message ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Your message"
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                  )}
+                </div>
 
-              <button
-                type="submit"
-                className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+                {submitStatus === 'success' && (
+                  <div className="p-3 bg-green-100 text-green-700 rounded-md">
+                    Message sent successfully!
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-3 bg-red-100 text-red-700 rounded-md">
+                    Failed to send message. Please try again.
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
+
+            <div className="p-4 bg-blue-50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                All fields marked with <span className="text-red-500">*</span> are required
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -97,14 +180,6 @@ export function Contact() {
 }
 
 // <form method="POST" className="space-y-4" action="https://formspree.io/f/manyzeag">
-
-// <div className="flex items-center gap-3">
-//   <Clock className="w-5 h-5 text-indigo-600" />
-//   <div>
-//     <p className="font-medium text-slate-700">Response Time</p>
-//     <p className="text-slate-600">Within 24 hours</p>
-//   </div>
-// </div>
 
 // <div className="flex items-center gap-3">
 //   <Clock className="w-5 h-5 text-indigo-600" />
