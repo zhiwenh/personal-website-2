@@ -52,7 +52,7 @@ export const projects = [
     image: googleMusicVisualizerImage,
     github: "https://github.com/zhiwenh/google-music-visualizer",
     date: "2016 - 2019",
-    technologies: ["JavaScript", "Web Audio API", "Canvas", "Music Visualization", "Browser Extension"]
+    technologies: ["JavaScript", "Web Audio API", "Music Visualization", "Browser Extension"]
   },
   {
     title: "Destore",
