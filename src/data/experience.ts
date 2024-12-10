@@ -1,7 +1,6 @@
 import darwinsLogo from './../darwins-logo.png';
 import floridaBiologixLogo from './../florida-biologix-logo.png';
 import haloPlatformLogo from './../halo-platform-logo.png';
-import haloPlatformLogo2 from './../halo-platform-logo-2.png';
 import iceRedLogo from './../icered-logo.png';
 import synapseLogo from './../synapse-logo.png';
 
@@ -34,7 +33,7 @@ export const workExperience = [
     company: "Halo Platform ",
     position: "Backend Developer",
     period: "May 2018 - Aug 2018",
-    logo: haloPlatformLogo2,
+    logo: haloPlatformLogo,
     description: "Developed a decentralized trading platform using the 0x Protocol for peer-to-peer cryptocurrency trading and built a Node.js-based exchange supporting Bitcoin, Ethereum, and Halo tokens. Ensured reliability with Mocha and Chai tests and contributed to rapid updates and feature enhancements in an Agile and Scrum environment.",
     technologies: ["Node.js", "0x Protocol", "Bitcoin", "Ethereum", "Mocha", "Chai"]
   },

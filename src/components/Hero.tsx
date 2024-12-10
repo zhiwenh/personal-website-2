@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import personalImage from './../personal-image.png';
 
 export function Hero() {
   return (
@@ -7,7 +8,7 @@ export function Hero() {
       <div className="max-w-4xl mx-auto px-4 text-center">
         <div className="mb-8">
           <img
-            src=""
+            src={personalImage}
             alt="Zhiwen Huang"
             className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-400"
           />
@@ -22,9 +23,10 @@ export function Hero() {
         </p>
 
         <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-          Hi, I'm Zhiwen, a full-stack software engineer with a passion for blockchain
-          technology and decentralized applications. With experience across Ethereum and Solana,
-          I've developed innovative solutions in DeFi, NFTs, and token ecosystems.
+          Hi, I’m Zhiwen, a full-stack software engineer specializing in blockchain and
+          decentralized applications. I’ve worked on DeFi, NFTs, tokens, smart contracts,
+          DEXs, and scalable backends. I also develop dynamic web and mobile apps using
+          React, Angular, and Next.js, focusing on high-quality, user-friendly design.
         </p>
 
         <div className="flex justify-center gap-6 mb-12">
@@ -48,7 +50,7 @@ export function Hero() {
             <Mail className="w-4 h-4" />
           </a>
           <a
-            href="#experience"
+            href="#projects"
             className="inline-flex items-center gap-2 bg-slate-800 text-slate-200 px-6 py-3 rounded-full hover:bg-slate-700 transition-colors border border-slate-600"
           >
             View My Work
