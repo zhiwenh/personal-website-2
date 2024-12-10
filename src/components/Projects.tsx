@@ -17,7 +17,7 @@ export function Projects() {
               />
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mr-1">{project.title}</h3>
                   <span className="text-sm text-gray-500">{project.date}</span>
                 </div>
                 <p className="text-gray-600 mb-4">{project.description}</p>
