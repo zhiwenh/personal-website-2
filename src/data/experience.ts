@@ -26,7 +26,7 @@ export const workExperience = [
     position: "Blockchain Engineer",
     period: "Jun 2021 - Nov 2021",
     logo: darwinsLogo,
-    description: "Contributed to decentralized finance by developing an ERC-721 rewards contract withlazy minting for user engagement and leading a layer-1 to layer-2 migration with batch transactions forscalability and cost reduction. Built front-end and back-end features for ERC-721 minting and transfers and created versatile buy-sell, auction, and offer contracts for trading. My work included developing Angular 2 components, a TypeScript backend with Hapi, and MongoDB for transaction management. Also created the smart contract for Cultiez, a 7,000-piece generative NFT collection now on OpenSea.",
+    description: "Contributed to decentralized finance by developing an ERC-721 rewards contract with lazy minting for user engagement and leading a layer-1 to layer-2 migration with batch transactions for scalability and cost reduction. Built front-end and back-end features for ERC-721 minting and transfers and created versatile buy-sell, auction, and offer contracts for trading. My work included developing Angular 2 components, a TypeScript backend with Hapi, and MongoDB for transaction management. Also created the smart contract for Cultiez, a 7,000-piece generative NFT collection now on OpenSea.",
     technologies: ["ERC-721", "Layer-2", "Angular", "TypeScript", "Hapi", "MongoDB"]
   },
   {
