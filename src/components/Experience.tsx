@@ -1,18 +1,11 @@
 import React from 'react';
-import { Briefcase, Calendar, ArrowUpRight } from 'lucide-react';
 import { workExperience } from '../data/experience';
 
 export function Experience() {
   return (
-    <section id="experience" className="py-10 bg-slate-900">
+    <section id="experience" className="py-10 bg-gradient-to-br from-slate-900 to-indigo-900">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Work Experience</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Building innovative solutions across blockchain and web technologies
-          </p>
-        </div>
-
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">Work Experience</h2>
         <div className="space-y-8">
           {workExperience.map((exp, index) => (
             <div
@@ -25,7 +18,7 @@ export function Experience() {
                     <img
                       src={exp.logo}
                       alt={exp.company}
-                      className="object-cover object-center items-center"
+                      className="w-full h-full object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors" />
                   </div>
@@ -40,7 +33,6 @@ export function Experience() {
                       <p className="text-indigo-400 font-medium">{exp.company}</p>
                     </div>
                     <div className="flex items-center gap-2 text-slate-400">
-                      <Calendar className="w-4 h-4" />
                       <span className="text-sm">{exp.period}</span>
                     </div>
                   </div>

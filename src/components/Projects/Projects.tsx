@@ -20,9 +20,9 @@ export function Projects() {
           ))}
         </div>
       </div>
-      <ImageModal 
-        image={selectedImage} 
-        onClose={() => setSelectedImage(null)} 
+      <ImageModal
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
       />
     </section>
   );
