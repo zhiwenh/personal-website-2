@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, Download } from 'lucide-react';
+import zhiwenHuangResume from './../zhiwen-huang-resume.pdf';
 
 export function Resume() {
   return (
@@ -14,7 +15,7 @@ export function Resume() {
                 <h3 className="text-xl font-semibold text-white mr-2">Zhiwen Huang - Resume</h3>
               </div>
               <a
-                href="/zhiwen-huang-resume.pdf"
+                href={zhiwenHuangResume}
                 download
                 className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
               >
@@ -42,7 +43,7 @@ export function Resume() {
               </div>
               <div className="pt-4">
                 <a
-                  href="/zhiwen-huang-resume.pdf"
+                  href={zhiwenHuangResume}
                   className="text-indigo-400 hover:text-indigo-300 text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
