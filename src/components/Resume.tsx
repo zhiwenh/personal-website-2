@@ -28,7 +28,7 @@ export function Resume() {
                 <h4 className="text-lg font-semibold text-slate-200 mb-2">Summary</h4>
                 <p className="text-slate-300">
                   Full-stack software engineer with expertise in blockchain technology and decentralized applications.
-                  Experienced in developing innovative solutions across Ethereum and Solana ecosystems,
+                  Experienced in developing innovative solutions across Ethereum,
                   specializing in DeFi, NFTs, and token systems.
                 </p>
               </div>
