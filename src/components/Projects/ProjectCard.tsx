@@ -43,7 +43,7 @@ export function ProjectCard({ project, onImageClick }: ProjectCardProps) {
         </div>
 
         <div className="flex gap-4">
-          <a
+          {project.github ? <a
             href={project.github}
             className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700"
             target="_blank"
@@ -51,7 +51,7 @@ export function ProjectCard({ project, onImageClick }: ProjectCardProps) {
           >
             <Github className="w-5 h-5" />
             Code
-          </a>
+          </a> : ''}
         </div>
       </div>
     </div>
