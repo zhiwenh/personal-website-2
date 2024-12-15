@@ -61,7 +61,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a
-            href="#"
+            href="#about"
             className="flex items-center gap-2 group"
             onClick={handleNavClick}
           >
