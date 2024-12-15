@@ -13,7 +13,7 @@ export const projects = [
     description: "An AI video generation website. Used the HunyuanVideo open source model as the means to generate the videos. Frontend used React and TailwindCSS.",
     image: unrealVideoAIImage,
     date: "2024",
-    technologies: ["AI", "React", "Tailwind CSS", "Video Generation", "Vite"]
+    technologies: ["AI", "React", "Tailwind CSS", "Video Generation", "Vite", "Supabase", "PostgreSQL"]
   },
   {
     title: "Personal Website",
