@@ -5,8 +5,16 @@ import dexImage from './../dex2.png';
 import googleMusicVisualizerImage from './../google-music-visualizer.png';
 import leagueOfLegendsCooldownTrackerImage from './../league-of-legends-cooldown-tracker2.png';
 import personalWebsiteImage from './../personal-website-image.png';
+import unrealVideoAIImage from './../unreal-video-ai-image.png';
 
 export const projects = [
+  {
+    title: "Unreal Video AI",
+    description: "An AI video generation website. Used the HunyuanVideo open source model as the means to generate the videos. Frontend used React and TailwindCSS.",
+    image: unrealVideoAIImage,
+    date: "2024",
+    technologies: ["AI", "React", "Tailwind CSS", "Video Generation", "Vite"]
+  },
   {
     title: "Personal Website",
     description: "A personal website built using React and with the styling done with TailwindCSS.",
