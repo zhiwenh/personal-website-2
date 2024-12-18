@@ -1,9 +1,9 @@
 import delibImage from './../delib.png';
-import destoreImage from './../destore2.png';
+import destoreImage from './../destore.png';
 import devchainImage from './../devchain.png';
 import dexImage from './../dex2.png';
 import googleMusicVisualizerImage from './../google-music-visualizer.png';
-import leagueOfLegendsCooldownTrackerImage from './../league-of-legends-cooldown-tracker2.png';
+import leagueOfLegendsCooldownTrackerImage from './../league-of-legends-cooldown-tracker.png';
 import personalWebsiteImage from './../personal-website-image.png';
 import unrealVideoAIImage from './../unreal-video-ai-image.png';
 
