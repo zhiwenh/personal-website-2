@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     title: "Google Music Visualizer",
-    description: "A music visualizer for Google Play Music.",
+    description: "A music visualizer Chrome extension for the former website Google Play Music.",
     image: googleMusicVisualizerImage,
     github: "https://github.com/zhiwenh/google-music-visualizer",
     date: "2016 - 2019",
