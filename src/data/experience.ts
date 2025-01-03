@@ -3,8 +3,17 @@ import floridaBiologixLogo from './../florida-biologix-logo.png';
 import haloPlatformLogo from './../halo-platform-logo.png';
 import iceRedLogo from './../icered-logo.png';
 import synapseLogo from './../synapse-logo.png';
+import hybridAdsAiLogo from './../hybrid-ads-ai-logo.png';
 
 export const workExperience = [
+  {
+    company: "Hybrid Ads.ai",
+    position: "Software Developer",
+    period: "Dec 2024 - Present",
+    logo: hybridAdsAiLogo,
+    description: "Worked on AI video generation features",
+    technologies: ["AI", "Video Generation"]
+  },
   {
     company: "Synapse",
     position: "Software Engineer III",
