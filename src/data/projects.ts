@@ -9,11 +9,12 @@ import unrealVideoAIImage from './../unreal-video-ai-image.png';
 
 export const projects = [
   {
-    title: "Unreal Video AI",
-    description: "An AI video generation website. Used the HunyuanVideo open source model as the means to generate the videos. Frontend used React and TailwindCSS.",
+    title: "UnrealVideoAI",
+    description: "An application that automatically detects scenes in your videos.",
     image: unrealVideoAIImage,
-    date: "2024",
-    technologies: ["AI", "React", "Tailwind CSS", "Video Generation", "Vite", "Supabase", "PostgreSQL"]
+    date: "2025",
+    technologies: ["React", "Vite", "MongoDB"],
+    website: "https://unrealvideo.ai"
   },
   {
     title: "Personal Website",
@@ -21,22 +22,24 @@ export const projects = [
     github: "https://github.com/zhiwenh/personal-website-2",
     image: personalWebsiteImage,
     date: "2024",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"]
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"],
+    website: "https://zhiwenh.com"
   },
   {
     title: "Dex",
     description: "A decentralized exchange for Ethereum ERC-20 tokens. Works off a single smart contract that sits on the Ethereum blockchain. Users can add tokens to trade and trade for other tokens.",
     image: dexImage,
     date: "2024",
-    technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"]
+    technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"],
   },
   {
     title: "Delib",
-    description: "A simple Ethereum framework. It allows you to compile, build, and deploy smart contracts. It also allows you to easily create decentralized applications with the smart contracts you created.",
+    description: "A simple Ethereum framework that's on npm . It allows you to compile, build, and deploy smart contracts. It also allows you to easily create decentralized applications with the smart contracts you created.",
     image: delibImage,
     github: "https://github.com/zhiwenh/delib",
     date: "2016 - 2021",
-    technologies: ["Ethereum", "Node.js", "Solidity", "TypeScript", "Smart Contracts", "DApp Development"]
+    technologies: ["Ethereum", "Node.js", "Solidity", "TypeScript", "Smart Contracts", "DApp Development"],
+    website:"https://www.npmjs.com/package/delib"
   },
   {
     title: "Devchain",
@@ -44,7 +47,7 @@ export const projects = [
     image: devchainImage,
     github: "https://github.com/zhiwenh/devchain",
     date: "2016 - 2018",
-    technologies: ["Ethereum", "Node.js", "Docker", "TestNet", "Blockchain", "Development Tools"]
+    technologies: ["Ethereum", "Node.js", "Docker", "TestNet", "Blockchain", "Development Tools"],
   },
   {
     title: "League of Legends Cooldown Tracker",
@@ -52,7 +55,7 @@ export const projects = [
     image: leagueOfLegendsCooldownTrackerImage,
     github: "https://github.com/zhiwenh/lolcooldown",
     date: "2019",
-    technologies: ["React Native", "iOS", "Android", "Mobile Development", "Game Integration"]
+    technologies: ["React Native", "iOS", "Android", "Mobile Development", "Game Integration"],
   },
   {
     title: "Google Music Visualizer",
@@ -60,7 +63,7 @@ export const projects = [
     image: googleMusicVisualizerImage,
     github: "https://github.com/zhiwenh/google-music-visualizer",
     date: "2016 - 2019",
-    technologies: ["JavaScript", "Web Audio API", "Music Visualization", "Browser Extension"]
+    technologies: ["JavaScript", "Web Audio API", "Music Visualization", "Browser Extension"],
   },
   {
     title: "Destore",
@@ -68,6 +71,6 @@ export const projects = [
     image: destoreImage,
     github: "https://github.com/zhiwenh/destore",
     date: "2016",
-    technologies: ["Ethereum", "IPFS", "Smart Contracts", "Decentralized Storage", "File Sharing"]
+    technologies: ["Ethereum", "IPFS", "Smart Contracts", "Decentralized Storage", "File Sharing"],
   }
 ];
