@@ -11,8 +11,7 @@ export const workExperience = [
     position: "Software Developer",
     period: "Dec 2024 - Present",
     logo: hybridAdsAiLogo,
-    description: "Worked on AI video generation features",
-    technologies: ["AI", "Video Generation"]
+    technologies: ["AI"]
   },
   {
     company: "Synapse",
