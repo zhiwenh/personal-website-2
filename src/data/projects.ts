@@ -9,7 +9,7 @@ import unrealVideoAIImage from './../unreal-video-ai-image.png';
 
 export const projects = [
   {
-    title: "UnrealVideoAI",
+    title: "Unreal Video AI",
     description: "An application that automatically detects scenes in your videos.",
     image: unrealVideoAIImage,
     date: "2025",

@@ -23,9 +23,9 @@ export function Hero() {
         </p>
 
         <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-          Hi, I’m Zhiwen, a full-stack software engineer specializing in blockchain and
-          AI applications. I’ve worked on DeFi applications, NFTs, tokens, smart
-          contracts, DEXs, and an AI video generation website. I also develop
+          Hi, I’m Zhiwen, a full-stack software engineer specializing in blockchain and software applications. 
+          I’ve worked on DeFi applications, NFTs, tokens, smart
+          contracts, DEXs, and a video processing website. I also develop
           dynamic web and mobile apps using React and Angular, focusing on high-quality,
           user-friendly design.
         </p>
