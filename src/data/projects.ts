@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     title: "Delib",
-    description: "A simple Ethereum framework that's on npm . It allows you to compile, build, and deploy smart contracts. It also allows you to easily create decentralized applications with the smart contracts you created.",
+    description: "A simple Ethereum framework that's on npm. It allows you to compile, build, and deploy smart contracts. It also allows you to easily create decentralized applications with the smart contracts you created.",
     image: delibImage,
     github: "https://github.com/zhiwenh/delib",
     date: "2016 - 2021",
