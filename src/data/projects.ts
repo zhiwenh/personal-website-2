@@ -6,6 +6,7 @@ import googleMusicVisualizerImage from './../google-music-visualizer.png';
 import leagueOfLegendsCooldownTrackerImage from './../league-of-legends-cooldown-tracker.png';
 import personalWebsiteImage from './../personal-website-image.png';
 import unrealVideoAIImage from './../unreal-video-ai-image.png';
+import dapperLimoLaxImage from './../dapper-limo-lax.png';
 
 export const projects = [
   {
@@ -15,6 +16,14 @@ export const projects = [
     date: "2025",
     technologies: ["React", "Vite", "MongoDB"],
     website: "https://unrealvideo.ai"
+  },
+  {
+    title: "Dapper Limo LAX",
+    description: "A website for Dapper Limo LAX that allows customers to book rides, contains an admin panel, and contains a drivers panel.",
+    image: dapperLimoLaxImage,
+    date: "2025",
+    technologies: ["React", "Vite", "MongoDB", "Tailwind CSS"],
+    website: "https://dapplimolax.vercel.app/"
   },
   {
     title: "Personal Website",
