@@ -30,7 +30,7 @@ export const projects = [
     description: "A personal website built using React and with the styling done with TailwindCSS.",
     github: "https://github.com/zhiwenh/personal-website-2",
     image: personalWebsiteImage,
-    date: "2024",
+    date: "2025",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"],
     website: "https://zhiwenh.com"
   },
@@ -38,7 +38,7 @@ export const projects = [
     title: "Dex",
     description: "A decentralized exchange for Ethereum ERC-20 tokens. Works off a single smart contract that sits on the Ethereum blockchain. Users can add tokens to trade and trade for other tokens.",
     image: dexImage,
-    date: "2024",
+    date: "2025",
     technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"],
   },
   {
