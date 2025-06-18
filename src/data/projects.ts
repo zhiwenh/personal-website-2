@@ -40,6 +40,7 @@ export const projects = [
     image: dexImage,
     date: "2025",
     technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"],
+    website: "https://dex-omega-eight.vercel.app/"
   },
   {
     title: "Delib",
