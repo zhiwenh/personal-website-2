@@ -42,7 +42,7 @@ export function Navbar() {
 
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      const navbarHeight = 64;
+      const navbarHeight = 64; // Height of the navbar
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
       window.scrollTo({

@@ -4,12 +4,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem; /* Adjust this value based on your navbar height */
-}
-
-/* Ensure content sections have proper padding */
-section {
-  scroll-margin-top: 5rem;
 }
 
 /* Enable text selection globally */
