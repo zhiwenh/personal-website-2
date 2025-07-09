@@ -6,6 +6,8 @@ import synapseLogo from './../synapse-logo.png';
 import hybridAdsAiLogo from './../hybrid-ads-ai-logo.png';
 import unrealVideoAiLogo from './../unrealvideoai-logo.png';
 
+// minor
+
 export const workExperience = [
   {
     company: "UnrealVideo.ai",
