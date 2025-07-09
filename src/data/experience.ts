@@ -4,13 +4,15 @@ import haloPlatformLogo from './../halo-platform-logo.png';
 import iceRedLogo from './../icered-logo.png';
 import synapseLogo from './../synapse-logo.png';
 import hybridAdsAiLogo from './../hybrid-ads-ai-logo.png';
+import unrealVideoAiLogo from './../unrealvideoai-logo.png';
 
 export const workExperience = [
   {
-    company: "Hybrid Ads.ai",
+    company: "UnrealVideo.ai",
     position: "Software Developer",
     period: "Dec 2024 - Present",
-    logo: hybridAdsAiLogo,
+    logo: unrealVideoAiLogo,
+    description: "Built a full-stack AI video generation platform with a modern, responsive UI using React and Tailwind CSS. Developed a backend system integrating MongoDB for data storage and user authentication. Implemented features such as automatic scene detection and manual trimming to streamline video editing. Integrated a token-based payment structure using Stripe for processing payments within the scene detection application.",
     technologies: ["AI"]
   },
   {

@@ -10,6 +10,14 @@ import dapperLimoLaxImage from './../dapper-limo-lax.png';
 
 export const projects = [
   {
+    title: "Dex",
+    description: "A decentralized exchange for Ethereum ERC-20 tokens. Works off a single smart contract that sits on the Ethereum blockchain. Users can add tokens to trade and trade for other tokens.",
+    image: dexImage,
+    date: "2025",
+    technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"],
+    website: "https://dex-omega-eight.vercel.app/"
+  },
+  {
     title: "Unreal Video AI",
     description: "An application that automatically detects scenes in your videos.",
     image: unrealVideoAIImage,
@@ -33,14 +41,6 @@ export const projects = [
     date: "2025",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"],
     website: "https://zhiwenh.com"
-  },
-  {
-    title: "Dex",
-    description: "A decentralized exchange for Ethereum ERC-20 tokens. Works off a single smart contract that sits on the Ethereum blockchain. Users can add tokens to trade and trade for other tokens.",
-    image: dexImage,
-    date: "2025",
-    technologies: ["Ethereum", "Solidity", "ERC-20", "React", "Web3.js", "Smart Contracts"],
-    website: "https://dex-omega-eight.vercel.app/"
   },
   {
     title: "Delib",
