@@ -20,7 +20,7 @@ export const workExperience = [
   {
     company: "Synapse",
     position: "Software Engineer III",
-    period: "Mar 2022 - Jun 2022",
+    period: "Mar 2022 - Jul 2022",
     logo: synapseLogo,
     description: "Streamlined financial applications by deploying Ethereum nodes on AWS and developed a multi-chain custodial wallet supporting Ethereum, Solana, and Polygon to enhance trading. Using Terraform, automated Polygon node deployment, improving scalability. Also created detailed diagrams of Ethereum-based trade functionality for better clarity and decision-making.",
     technologies: ["Ethereum", "Solana", "Polygon", "AWS", "Terraform", "Node.js"]
@@ -28,7 +28,7 @@ export const workExperience = [
   {
     company: "Icered",
     position: "Blockchain Engineer",
-    period: "Nov 2021 - Jan 2022",
+    period: "Nov 2021 - Feb 2022",
     logo: iceRedLogo,
     description: "Developed an admin-controlled ERC-20 token for cost-efficient minting and created smart contracts and backend services for an NFT exchange, enabling message signing, lazy minting, and Ethereum integration. Using MongoDB, ensured reliable transaction data storage. Also contributed to the architecture of a centralized crypto exchange for Bitcoin, Ethereum, ERC-20, and Icered tokens, streamlining workflows with Docker.",
     technologies: ["Solidity", "ERC-20", "NFT", "MongoDB", "Docker", "Node.js"]
