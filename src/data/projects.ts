@@ -74,13 +74,5 @@ export const projects = [
     github: "https://github.com/zhiwenh/google-music-visualizer",
     date: "2016 - 2019",
     technologies: ["JavaScript", "Web Audio API", "Music Visualization", "Browser Extension"],
-  },
-  {
-    title: "Destore",
-    description: "A file storage platform built on Ethereum. Used IPFS for the ability to send files to other people.",
-    image: destoreImage,
-    github: "https://github.com/zhiwenh/destore",
-    date: "2016",
-    technologies: ["Ethereum", "IPFS", "Smart Contracts", "Decentralized Storage", "File Sharing"],
   }
 ];

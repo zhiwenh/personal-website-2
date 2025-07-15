@@ -5,7 +5,7 @@ import iceRedLogo from './../icered-logo.png';
 import synapseLogo from './../synapse-logo.png';
 import hybridAdsAiLogo from './../hybrid-ads-ai-logo.png';
 import unrealVideoAiLogo from './../unrealvideoai-logo.png';
-
+import deStoreLogo from './../destore-logo.png';
 // minor
 
 export const workExperience = [
@@ -42,12 +42,20 @@ export const workExperience = [
     technologies: ["ERC-721", "Layer-2", "Angular", "TypeScript", "Hapi", "MongoDB"]
   },
   {
-    company: "Halo Platform ",
+    company: "Halo Platform",
     position: "Backend Developer",
     period: "May 2018 - Aug 2018",
     logo: haloPlatformLogo,
     description: "Developed a decentralized trading platform using the 0x Protocol for peer-to-peer cryptocurrency trading and built a Node.js-based exchange supporting Bitcoin, Ethereum, and Halo tokens. Ensured reliability with Mocha and Chai tests and contributed to rapid updates and feature enhancements in an Agile and Scrum environment.",
     technologies: ["Node.js", "0x Protocol", "Bitcoin", "Ethereum", "Mocha", "Chai"]
+  },
+  {
+    company: "DeStore",
+    position: "Software Engineer",
+    period: "Jun 2016 - Nov 2016",
+    logo: deStoreLogo,
+    description: "Architected a decentralized, Ethereum-based peer-to-peer file storage platform that enabled trustless cryptocurrency exchange between users. Designed and secured Solidity smart contracts for distributed database functionality, file location routing, and user payments. Built the Electron client using an MVC design pattern and an embedded MongoDB-like database. Implemented distributed file transfer by splitting files into blocks connected via a Merkle DAG and transferring them through IPFS. Wrote comprehensive unit and integration tests for both the smart contracts and peer-to-peer network to ensure full platform coverage and reliability.",
+    technologies: ["Ethereum", "Solidity", "IPFS", "Electron", "MongoDB", "MVC", "Mocha", "Chai"]
   },
   {
     company: "Florida Biologix",
