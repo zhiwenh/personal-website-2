@@ -50,14 +50,6 @@ export const workExperience = [
     technologies: ["Node.js", "0x Protocol", "Bitcoin", "Ethereum", "Mocha", "Chai"]
   },
   {
-    company: "DeStore",
-    position: "Software Engineer",
-    period: "Jun 2016 - Nov 2016",
-    logo: deStoreLogo,
-    description: "Architected a decentralized, Ethereum-based peer-to-peer file storage platform that enabled trustless cryptocurrency exchange between users. Designed and secured Solidity smart contracts for distributed database functionality, file location routing, and user payments. Built the Electron client using an MVC design pattern and an embedded MongoDB-like database. Implemented distributed file transfer by splitting files into blocks connected via a Merkle DAG and transferring them through IPFS. Wrote comprehensive unit and integration tests for both the smart contracts and peer-to-peer network to ensure full platform coverage and reliability.",
-    technologies: ["Ethereum", "Solidity", "IPFS", "Electron", "MongoDB", "MVC", "Mocha", "Chai"]
-  },
-  {
     company: "Florida Biologix",
     position: "Lab Technician",
     period: "Mar 2015 – Aug 2015",
